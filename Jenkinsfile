@@ -4,13 +4,14 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        echo 'Bees Buzz!'
+        sh './jenkins/build.sh'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Testing..'
+        sh './jenkins/test-all.sh'
       }
     }
 
