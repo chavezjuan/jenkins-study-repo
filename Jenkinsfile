@@ -4,14 +4,14 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building..'
-        sh './jenkins/build.sh'
+        sh 'chmod +x ./jenkins/build.sh'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Testing..'
-        sh './jenkins/test-all.sh'
+        sh 'chmod +x ./jenkins/test-all.sh'
       }
     }
 
