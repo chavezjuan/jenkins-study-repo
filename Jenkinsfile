@@ -5,7 +5,6 @@ pipeline {
       steps {
         echo 'Building..'
         sh 'chmod +x ./jenkins/build.sh'
-        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 
